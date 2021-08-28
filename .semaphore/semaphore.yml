@@ -52,6 +52,49 @@ blocks:
   - name: "Second block"
     task:
       jobs:
+      - name: "job 11"
+        commands:
+          - "true"
+
+      - name: "job 12"
+        commands:
+          - "true"
+
+      - name: "job 13"
+        commands:
+          - "true"
+
+      - name: "job 14"
+        commands:
+          - "true"
+
+      - name: "job 15"
+        commands:
+          - "true"
+
+      - name: "job 16"
+        commands:
+          - "true"
+
+      - name: "job 17"
+        commands:
+          - "true"
+
+      - name: "job 18"
+        commands:
+          - "true"
+
+      - name: "job 19"
+        commands:
+          - "true"
+
+      - name: "job 110"
+        commands:
+          - "true"
+
+  - name: "Third block"
+    task:
+      jobs:
         - name: "Finisher"
           commands:
             - "true"
