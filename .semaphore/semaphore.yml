@@ -799,6 +799,14 @@ blocks:
         commands:
           - "true"
 
+  - name: "Block 100"
+    dependencies: []
+    task:
+      jobs:
+      - name: "Job 1"
+        commands:
+          - "true"
+
 
   - name: "Finish"
     dependencies:
@@ -901,6 +909,7 @@ blocks:
       - "Block 97"
       - "Block 98"
       - "Block 99"
+      - "Block 100"
     task:
       jobs:
         - name: "Fin"

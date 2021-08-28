@@ -11,7 +11,7 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-<% 99.times do |i| %>
+<% 100.times do |i| %>
   - name: "Block <%= i + 1 %>"
     dependencies: []
     task:
@@ -23,7 +23,7 @@ blocks:
 
   - name: "Finish"
     dependencies:
-<% 99.times do |i| -%>
+<% 100.times do |i| -%>
       - "Block <%= i + 1 %>"
 <% end -%>
     task:
