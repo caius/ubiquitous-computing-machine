@@ -6,95 +6,56 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: "First block"
+  - name: "Block 1"
+    dependencies: []
     task:
       jobs:
-      - name: "job 1"
+      - name: "Job 1"
         commands:
           - "true"
 
-      - name: "job 2"
-        commands:
-          - "true"
-
-      - name: "job 3"
-        commands:
-          - "true"
-
-      - name: "job 4"
-        commands:
-          - "true"
-
-      - name: "job 5"
-        commands:
-          - "true"
-
-      - name: "job 6"
-        commands:
-          - "true"
-
-      - name: "job 7"
-        commands:
-          - "true"
-
-      - name: "job 8"
-        commands:
-          - "true"
-
-      - name: "job 9"
-        commands:
-          - "true"
-
-      - name: "job 10"
-        commands:
-          - "true"
-
-  - name: "Second block"
+  - name: "Block 2"
+    dependencies: []
     task:
       jobs:
-      - name: "job 11"
+      - name: "Job 1"
         commands:
           - "true"
 
-      - name: "job 12"
-        commands:
-          - "true"
-
-      - name: "job 13"
-        commands:
-          - "true"
-
-      - name: "job 14"
-        commands:
-          - "true"
-
-      - name: "job 15"
-        commands:
-          - "true"
-
-      - name: "job 16"
-        commands:
-          - "true"
-
-      - name: "job 17"
-        commands:
-          - "true"
-
-      - name: "job 18"
-        commands:
-          - "true"
-
-      - name: "job 19"
-        commands:
-          - "true"
-
-      - name: "job 110"
-        commands:
-          - "true"
-
-  - name: "Third block"
+  - name: "Block 3"
+    dependencies: []
     task:
       jobs:
-        - name: "Finisher"
+      - name: "Job 1"
+        commands:
+          - "true"
+
+  - name: "Block 4"
+    dependencies: []
+    task:
+      jobs:
+      - name: "Job 1"
+        commands:
+          - "true"
+
+  - name: "Block 5"
+    dependencies: []
+    task:
+      jobs:
+      - name: "Job 1"
+        commands:
+          - "true"
+
+
+  - name: "Finish"
+    dependencies:
+      - "Block 1"
+      - "Block 2"
+      - "Block 3"
+      - "Block 4"
+      - "Block 5"
+    task:
+      jobs:
+        - name: "Job"
           commands:
             - "true"
