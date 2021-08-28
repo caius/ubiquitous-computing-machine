@@ -48,3 +48,10 @@ blocks:
       - name: "job 10"
         commands:
           - "true"
+
+  - name: "Second block"
+    task:
+      jobs:
+        - name: "Finisher"
+          commands:
+            - "true"
