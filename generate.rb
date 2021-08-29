@@ -13,10 +13,10 @@ agent:
 blocks:
 <% 99.times do |i| %>
   - name: "Block <%= i + 1 %>"
-    dependencies: []
+    dependencies: [<%= %{"Block #{i}"} if i > 0 %>]
     task:
       jobs:
-<% (i == 0 ? 51 : 50).times do |j| -%>
+<% 1.times do |j| -%>
       - name: "Job <%= j + 1 %>"
         commands:
           - "true"
@@ -25,9 +25,7 @@ blocks:
 
   - name: "Finish"
     dependencies:
-<% 99.times do |i| -%>
-      - "Block <%= i + 1 %>"
-<% end -%>
+      - "Block 99"
     task:
       jobs:
         - name: "Fin"
