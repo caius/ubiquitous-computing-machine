@@ -16,7 +16,7 @@ blocks:
     dependencies: []
     task:
       jobs:
-<% 50.times do |j| -%>
+<% (i == 0 ? 51 : 50).times do |j| -%>
       - name: "Job <%= j + 1 %>"
         commands:
           - "true"

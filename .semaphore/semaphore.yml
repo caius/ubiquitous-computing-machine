@@ -161,6 +161,9 @@ blocks:
       - name: "Job 50"
         commands:
           - "true"
+      - name: "Job 51"
+        commands:
+          - "true"
 
   - name: "Block 2"
     dependencies: []
